@@ -27,7 +27,7 @@ android {
             versionNameSuffix ".r"
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-        // Modo: DESARROLLO
+        //Modo:DESARROLLO
         debug {
             debuggable true
             minifyEnabled false
@@ -65,4 +65,17 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // debugImplementation because LeakCanary should only run in debug builds.
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+    // ACRA Mail
+    implementation("ch.acra:acra-mail:5.8.4")
+    // ACRA dialog
+    implementation("ch.acra:acra-dialog:5.8.4")
+    // ACRA Notification
+    //implementation("ch.acra:acra-notification:5.8.4")
+    // ACRA toast
+    //implementation("ch.acra:acra-toast:5.8.4")
+
+
 }
