@@ -26,6 +26,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    android.applicationVariants.all { variant ->
+         variant.outputs.each { output ->
+            output.versionCodeOverride = project.ext.buildTimestamp
+            output.versionNameOverride = project.ext.buildVersion + (variant.name == "debug" ? ".d" : ".r")
+        }
+
+    }
     kotlinOptions {
         jvmTarget = '1.8'
     }

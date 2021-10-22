@@ -28,7 +28,7 @@ buildscript {
 }
 
 allprojects{
-    ext.builTimestamp = BUILD_TIMESTAMP
+    ext.buildTimestamp = BUILD_TIMESTAMP
     ext.buildVersion = BUILD_VERSION
     logger.lifecycle("Compile Version: ${BUILD_VERSION}.")
     //NECESARIOO
