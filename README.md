@@ -7,3 +7,5 @@ This is an Android Mobile App to show the list of Funcionarios of UCN.
 ## License
 
 [MIT] (https://choosealicense.com/licenses/mit/)
+
+///////////////////////////////////////@RONALD CAMPILLAY///////////////////////////////////////////////////////////
