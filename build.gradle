@@ -31,6 +31,7 @@ allprojects{
     ext.builTimestamp = BUILD_TIMESTAMP
     ext.buildVersion = BUILD_VERSION
     logger.lifecycle("Compile Version: ${BUILD_VERSION}.")
+    //NECESARIOO
 }
 
 task clean(type: Delete) {
