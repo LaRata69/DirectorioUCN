@@ -27,7 +27,7 @@ android {
             versionNameSuffix ".r"
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-        // MODO: DESARROLLO
+        // Modo: DESARROLLO
         debug {
             debuggable true
             minifyEnabled false
