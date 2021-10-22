@@ -1,4 +1,18 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+def YEAR_WEEK   = new Date().format("yymm").toInteger()
+def DAY         = new Date().format("u").toInteger()
+def HOUR_MINUTE = new Date().format("HHmm").toInteger()
+
+//The Timestamp
+def BUILD_TIMESTAMP = 10000 + YEAR_WEEK + 10000 + DAY + HOUR_MINUTE
+
+// semantic Versioning
+def MAJOR = 1 // 1: Alce, 2: Burro, 3: Comunism
+def MINOR = 0
+def PATCH = BUILD_TIMESTAMP
+
+//Name of animals
+def BUILD_VERSION ="Alce-${MAJOR}.${MINOR}.${PATCH}"
+
 buildscript {
     repositories {
         google()
@@ -11,6 +25,12 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+}
+
+allprojects{
+    ext.builTimestamp = BUILD_TIMESTAMP
+    ext.buildVersion = BUILD_VERSION
+    logger.lifecycle("Compile Version: ${BUILD_VERSION}.")
 }
 
 task clean(type: Delete) {
